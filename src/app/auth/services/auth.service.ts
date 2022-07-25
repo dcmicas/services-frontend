@@ -35,6 +35,7 @@ export class AuthService {
   }
 
   signOut(): void {
+    if(confirm("Deseja mesmo sair?"))
     this.removerToken()
     this.router.navigateByUrl('/auth/login')
   }
