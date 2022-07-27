@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { User } from '../models/user';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { Title } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +15,8 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
-    private router: Router,
-    private title: Title
+    private router: Router
   ) { }
-  
-  ngOnInit() {
-    this.title.setTitle("Projeto BCW20 Services Frontend Squad 06 - Login");
-  }
-
 
   signIn(user: User): Observable<{ Authorization: string }> {
     return this.http.post<{ Authorization: string }>(`${this.baseUrl}/login`, user)
@@ -35,7 +28,6 @@ export class AuthService {
   }
 
   signOut(): void {
-    if(confirm("Deseja mesmo sair?"))
     this.removerToken()
     this.router.navigateByUrl('/auth/login')
   }

@@ -6,12 +6,15 @@ import { Observable } from 'rxjs';
 import { Funcionario } from '../../models/funcionario';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Title } from '@angular/platform-browser';
+import {FormControl} from '@angular/forms';
 
 @Component({
-  selector: 'app-form-funcionario',
+  selector: 'app-form-funcionario', 
   templateUrl: './form-funcionario.component.html',
   styleUrls: ['./form-funcionario.component.css']
 })
+
+
 export class FormFuncionarioComponent implements OnInit {
 
   formFuncionario: FormGroup = this.fb.group({
