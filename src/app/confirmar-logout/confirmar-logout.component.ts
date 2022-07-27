@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-confirmar-logout',
+  selector: 'confirmar-logout',
   templateUrl: './confirmar-logout.component.html',
   styleUrls: ['./confirmar-logout.component.css']
 })

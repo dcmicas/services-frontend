@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat/'
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { ConfirmarLogoutComponent } from './funcionarios/components/confirmar-logout/confirmar-logout.component';
+import { ConfirmarLogoutComponent } from './confirmar-logout/confirmar-logout.component';
 
 @NgModule({
   declarations: [

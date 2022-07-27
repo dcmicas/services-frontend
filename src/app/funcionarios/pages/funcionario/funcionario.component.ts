@@ -21,7 +21,8 @@ export class FuncionarioComponent implements OnInit {
   formFuncionario: FormGroup = this.fb.group({
     nome: ['', [ Validators.required ]],
     email: ['', [ Validators.required, Validators.email ]],
-    foto: ['']
+    foto: [''],
+    cargo: ['', [ Validators.required ]],
   })
 
   imagePreview: string = ''
@@ -65,7 +66,8 @@ export class FuncionarioComponent implements OnInit {
         this.formFuncionario.setValue({
           nome: this.funcionario.nome,
           email: this.funcionario.email,
-          foto: ''
+          foto: '',
+          cargo: this.funcionario.cargo
         })
 
         // 3° carregar o preview da imagem
