@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { Title } from '@angular/platform-browser';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup = this.fb.group({
     login: ['', [ Validators.required ]],
-    password: ['', [ Validators.required ]]
+    password: ['', [ Validators.required ]],
+    recaptcha: ['', [Validators.required]]
   })
 
   constructor(
@@ -31,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    const credenciais = this.loginForm.value
+    const credenciais = {login: this.loginForm.value.login, password: this.loginForm.value.password}
 
     this.authService.signIn(credenciais)
     .subscribe(
