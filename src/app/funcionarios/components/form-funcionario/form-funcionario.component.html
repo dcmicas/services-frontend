@@ -50,11 +50,14 @@
     >
     <button
       type="button"
-      mat-stroked-button
-      color="primary"
+      mat-stroked-button color="primary"
+      matTooltip="Selecione uma imagem" 
       (click)="fileInput.click()"
     >Selecione uma imagem</button>
 
-    <button type="submit" [disabled]="formFuncionario.invalid" mat-raised-button color="accent" id="salvar">Salvar</button>
+    <button type="submit" [disabled]="formFuncionario.invalid" 
+    mat-raised-button color="accent" 
+    matTooltip="Salvar" 
+    id="salvar">Salvar</button>
   </form>
 </section>

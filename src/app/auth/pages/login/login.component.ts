@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { Title } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-login',
@@ -49,3 +50,5 @@ export class LoginComponent implements OnInit {
 
   
 }
+
+export class TooltipModifiedDefaultsExample {}

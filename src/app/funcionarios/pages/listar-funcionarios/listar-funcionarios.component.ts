@@ -6,12 +6,14 @@ import { FormFuncionarioComponent } from '../../components/form-funcionario/form
 import { Funcionario } from '../../models/funcionario';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Title } from '@angular/platform-browser';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
-  selector: 'app-listar-funcionarios',
-  templateUrl: './listar-funcionarios.component.html',
-  styleUrls: ['./listar-funcionarios.component.css']
-})
+  selector: 'app-listar-funcionarios', 
+  templateUrl: './listar-funcionarios.component.html', 
+  styleUrls: ['./listar-funcionarios.component.css'],
+  })
+
 export class ListarFuncionariosComponent implements OnInit {
 
   funcionarios: Funcionario[] = []
@@ -126,3 +128,5 @@ export class ListarFuncionariosComponent implements OnInit {
     )
   }
 }
+
+export class TooltipModifiedDefaultsExample {}

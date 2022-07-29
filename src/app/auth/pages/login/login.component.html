@@ -28,7 +28,9 @@
         </mat-error>
       </mat-form-field>
       <re-captcha formControlName = "recaptcha"></re-captcha>
-      <button type="submit" mat-stroked-button color="primary" [disabled]="loginForm.invalid">
+      <button type="submit" 
+      matTooltip="Login"
+      mat-stroked-button color="primary" [disabled]="loginForm.invalid">
         <mat-icon>login</mat-icon>
       </button>
 

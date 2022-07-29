@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-confirmar-delecao',
@@ -13,3 +14,5 @@ export class ConfirmarDelecaoComponent implements OnInit {
   }
 
 }
+
+export class TooltipModifiedDefaultsExample {}
