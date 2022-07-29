@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-confirmar-saida',
@@ -13,3 +14,5 @@ export class ConfirmarSaidaComponent implements OnInit {
   }
 
 }
+
+export class TooltipModifiedDefaultsExample {}

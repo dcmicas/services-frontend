@@ -7,6 +7,7 @@ import { Funcionario } from '../../models/funcionario';
 import { FuncionarioService } from '../../services/funcionario.service';
 import { Title } from '@angular/platform-browser';
 import {FormControl} from '@angular/forms';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-form-funcionario', 
@@ -109,3 +110,5 @@ export class FormFuncionarioComponent implements OnInit {
     )
   }
 }
+
+export class TooltipModifiedDefaultsExample {}

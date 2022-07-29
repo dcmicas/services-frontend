@@ -3,6 +3,10 @@
   <p>Deseja mesmo sair?</p>
 </div>
 <div mat-dialog-actions>
-  <button [mat-dialog-close]="true" mat-raised-button color="warn">Sim</button>
-  <button [mat-dialog-close]="false" mat-raised-button color="primary">Cancelar</button>
+  <button [mat-dialog-close]="true" 
+  mat-raised-button matTooltip="Sim" 
+  color="warn">Sim</button>
+  <button [mat-dialog-close]="false" 
+  mat-raised-button  matTooltip="Cancelar" 
+  color="primary">Cancelar</button>
 </div>

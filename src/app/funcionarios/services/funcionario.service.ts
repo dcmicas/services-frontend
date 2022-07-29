@@ -16,7 +16,7 @@ export class FuncionarioService {
 
   constructor(
     private http: HttpClient,
-    private storage: AngularFireStorage, // objeto responsável por salvar os arquivos no firebase
+    private storage: AngularFireStorage, 
     private authService: AuthService,
     private title: Title
   ) { }

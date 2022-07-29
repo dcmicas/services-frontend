@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { ConfirmarLogoutComponent } from 'src/app/confirmar-logout/confirmar-logout.component';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-navbar',
@@ -28,3 +29,5 @@ export class NavbarComponent implements OnInit {
     })
   }
 }
+
+export class TooltipModifiedDefaultsExample {}

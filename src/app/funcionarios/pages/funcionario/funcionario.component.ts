@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { ConfirmarDelecaoComponent } from '../../components/confirmar-delecao/confirmar-delecao.component';
 import { Funcionario } from '../../models/funcionario';
 import { FuncionarioService } from '../../services/funcionario.service';
+import {MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipDefaultOptions} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-funcionario',
@@ -171,3 +172,5 @@ export class FuncionarioComponent implements OnInit {
     )
   }
 }
+
+export class TooltipModifiedDefaultsExample {}
