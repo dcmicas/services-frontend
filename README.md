@@ -1,6 +1,8 @@
-# ServicesFrontend
+# Services Frontend Project - Squad 06
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+<b><p> This project is part of the Java Full Stack bootcamp at SoulCode Academy. </b> </p> <br>
+
+It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
 ## Development server
 
@@ -17,6 +19,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## For @angular/core error
+
+Run this sequence: `npm cache clean --force` > `npm install` > `ng update` > `npm update`
 
 ## Running end-to-end tests
 
