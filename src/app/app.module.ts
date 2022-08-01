@@ -10,11 +10,13 @@ import { AngularFireModule } from '@angular/fire/compat/'
 import { environment } from 'src/environments/environment';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { ConfirmarLogoutComponent } from './confirmar-logout/confirmar-logout.component';
+import { BnNgIdleService } from 'bn-ng-idle';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConfirmarLogoutComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import { ConfirmarLogoutComponent } from './confirmar-logout/confirmar-logout.co
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [BnNgIdleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
