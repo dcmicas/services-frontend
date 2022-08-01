@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.usuario();
   }
 
   logout() {
@@ -28,6 +29,25 @@ export class NavbarComponent implements OnInit {
       }
     })
   }
+
+  usuario() {
+    /* console.log(this.authService.usuario()); */
+    
+    this.dataExpiration = this.authService.dataToken();
+
+    this.dataExpiration.getDate();
+
+    const dataAtual = new Date().getDate();
+
+    const sub =  this.dataExpiration.getDate() - dataAtual;
+
+    this.timer = new Date(sub);
+
+  }
+
+  dataExpiration!: Date 
+
+  timer!: Date 
+
 }
 
-export class TooltipModifiedDefaultsExample {}

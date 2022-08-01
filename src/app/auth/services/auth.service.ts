@@ -13,9 +13,12 @@ export class AuthService {
   private readonly baseUrl: string = 'http://localhost:8080'
   private jwt = new JwtHelperService() // esse objeto permitirá saber se o token está válido ou não
 
+
+
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    
   ) { }
 
   signIn(user: User): Observable<{ Authorization: string }> {
@@ -53,6 +56,18 @@ export class AuthService {
       return false
     }
 
+      console.log(this.jwt.isTokenExpired(token));
+      
+
     return !this.jwt.isTokenExpired(token) // testando a validade do token
+  }
+
+  dataToken(): Date {
+    const token = this.recuperarToken() as string;
+    
+
+    
+    
+    return this.jwt.getTokenExpirationDate(token) as Date ;
   }
 }

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { RECAPTCHA_SETTINGS, RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { BnNgIdleService } from 'bn-ng-idle';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { Router } from '@angular/router';
         siteKey: environment.recaptcha.siteKey,
       } as RecaptchaSettings,
     },
+
   ]
 })
 export class AuthModule { }
